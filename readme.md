@@ -19,3 +19,25 @@
 Приступайте к изучению языка C# прямо сейчас и развивайтесь как разработчик! ⌨️
 
 Мы рады видеть вас здесь и готовы помочь на каждом этапе вашего пути!
+
+## Некоторые настройки vs code
+
+### Исключить папки `bin` и `obj` из explorer'а
+```json
+"files.exclude": {
+    "**/bin": true,
+    "**/obj": true
+},
+```
+
+### Настройки плагина [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+
+```json
+"code-runner.runInTerminal": true,
+"code-runner.ignoreSelection": true,
+"code-runner.saveFileBeforeRun": true,
+"code-runner.executorMap": {
+    "csharp": "clear && echo \">>> \"$fileName && cd $dir && dotnet run $fileName",
+    // "csharp": "dotnet run",
+},
+```
