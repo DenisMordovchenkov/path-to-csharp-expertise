@@ -1,29 +1,26 @@
-﻿int score = 0;
+﻿uint scores = 0;
 
-string question = "Что означает слово 'cat'? [кошка, собака]";
-Console.WriteLine(question);
-string answer = Console.ReadLine();
-if (answer == "кошка")
+Console.WriteLine("Что означает слово 'cat'? [кошка, собака]");
+if (Console.ReadLine().ToLower() == "кошка")
 {
-    score += 10;
-    Console.WriteLine("Всё верно! 😎");
+	scores += 10;
+	Console.WriteLine("Всё верно!");
 }
 else
 {
-    Console.WriteLine("Нужно подумать ещё 🫣");
+	Console.WriteLine("Нужно подумать ещё");
 }
 
-question = "Что означает слово 'dog'? [кошка, собака]";
-Console.WriteLine(question);
-answer = Console.ReadLine();
-if (answer == "собака")
+Console.WriteLine("Что означает слово 'dog'? [кошка, собака]");
+
+if (Console.ReadLine().ToLower() == "собака")
 {
-    score += 10;
-    Console.WriteLine("Всё верно! 😎");
+	scores += 10;
+	Console.WriteLine("Всё верно!");
 }
 else
 {
-    Console.WriteLine("Нужно подумать ещё 🫣");
+	Console.WriteLine("Нужно подумать ещё");
 }
 
-Console.WriteLine($"Счёт: {score}");
+Console.WriteLine($"Счёт - {scores}");
